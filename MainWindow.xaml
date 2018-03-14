@@ -1,0 +1,31 @@
+﻿<Window x:Name="MyWindow" x:Class="TSP_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TSP_WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="1000">
+    <Grid>
+        <Button Content="Start!" HorizontalAlignment="Left" Height="35" Margin="834,272,0,0" VerticalAlignment="Top" Width="111" Click="Start"/>
+        <ContentControl x:Name="CCC" Content="" HorizontalAlignment="Left" Margin="10,11,0,0" VerticalAlignment="Top" Height="299" Width="367"/>
+        <TextBlock FontWeight="Bold" Margin="781,215,-261.4,203.4"><Run Text="Cooling"/><LineBreak/><Run Text="Speed:"/></TextBlock>
+        <TextBox Height="32" HorizontalAlignment="left" Margin="885,215,0,0" x:Name="speed" VerticalAlignment="Top" Width="60" Text="0.98"/>
+        <TextBox Height="32" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Margin="885,138,0,0" x:Name="Init_Temperature" Text="100"/>
+        <TextBlock Text="Initial&#13;Temperature:" FontWeight="Bold" Margin="781,138,-261.4,280.4" />
+        <TextBox Width="60" Height="32" Margin="885,69,0,0" x:Name="Min_Temperature" HorizontalAlignment="Left" VerticalAlignment="Top" Text="0.001"/>
+        <TextBlock FontWeight="Bold" Margin="781,69,113.6,349.4" ><Run Text="Min"/><LineBreak/><Run Text="Temperature:"/></TextBlock>
+        <TextBox Width="210" Margin="309,337,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="122" x:Name="Result"/>
+        <Label x:Name="Best" Content="{Binding runtimes}" HorizontalAlignment="Left" Margin="177,321,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="93" Visibility="Hidden"><Run Text="Current"/><Run Text=" AS&amp;HC"/><Run Text=":"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="10,349,0,0" TextWrapping="Wrap" Text="AS Current:" VerticalAlignment="Top" Width="74"/>
+        <Label x:Name="AS_Best" Content="{Binding runtimes}" HorizontalAlignment="Left" Margin="177,354,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,384,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74" Height="35"><Run Text="HillClimbing Current:"/><LineBreak/><Run/></TextBlock>
+        <Label x:Name="HillClimbing_Best" Content="{Binding runtimes}" HorizontalAlignment="Left" Margin="177,395,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="GA_Best" Content="{Binding runtimes}" HorizontalAlignment="Left" Margin="177,424,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.633,-2.067"/>
+        <ContentControl x:Name="CCC_Copy" Content="" HorizontalAlignment="Left" Margin="365,11,0,0" VerticalAlignment="Top" Height="299" Width="367"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,424,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74" Height="35"><Run Text="GA Current:"/><LineBreak/><Run/></TextBlock>
+        <ContentControl x:Name="CCC_Copy1" Content="ContentControl" HorizontalAlignment="Left" Margin="664,333,0,0" VerticalAlignment="Top" Height="126" Width="154"/>
+        <TextBlock HorizontalAlignment="Left" Margin="570,333,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Opt "/><Run Text="Graph"/></TextBlock>
+    </Grid>
+</Window>
